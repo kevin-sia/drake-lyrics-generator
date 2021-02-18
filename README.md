@@ -37,13 +37,15 @@ Lyrics are collected using the `scrape_artist_lyrics.py` Python script, then mer
 `text_generation_rnn_word.ipynb`
 - Same as above, but for *word prediction*
 
-Notes:
+---
+
+## Notes
 - The RNN built here is based on the [Text generation with an RNN tutorial](https://www.tensorflow.org/tutorials/text/text_generation) on the TensorFlow website
 - Because RNNs learn from the *sequence* of the data, there may be a slight bit of mis-learning(?) during model training due to the structure of the provided lyrics data not being entirely sequential.  The single text file that the model trains on contains *all* of an artist's lyrics, where the songs are ordered first by album release date and then by track order on each album.  Also, lyrics to any singles (i.e. songs released by themselves) are at the very end of the file (per the AZLyrics website design).  So, one aspect of the sequence that the model might learn is that between the end of one song and the start of another song, which in reality wouldn't have very much meaning (unless the songs are part of a concept album?)
 - There is a choice between using *character vectorization* vs. *word vectorization* - character vectorization might be more useful when there is less lyrics data, but word vectorization should result in more meaningful generated lyrics.  Regardless, it is probably best to train the generator on a large body of lyrics
 - Note that the data will include lyrics from guest features.  If we wanted to make a Drake lyrics generator, the writing style of a guest might impart different patterns than Drake's.  However, I wouldn't imagine that guest verses are too prevalent in a corpus of lyrics
 
---
+---
 
 ## Next Steps
 
