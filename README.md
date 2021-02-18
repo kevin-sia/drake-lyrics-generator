@@ -1,5 +1,7 @@
 # Lyrics Generator
 
+[](https://images.ctfassets.net/cnu0m8re1exe/5shE8ddaU9AjSNz157nffI/eefd59783b225fc4b19f8bf10b640a4c/shutterstock_365531318.jpg)
+
 The aim of this project is to create a lyrics generator for any artist's lyrics, with the original intent being a Drake lyrics generator.  It is comprised of two major parts:
 
 1. Code for scraping lyrics and generating a lyrics file for a single artist
@@ -36,5 +38,8 @@ Lyrics are collected using the `scrape_artist_lyrics.py` Python script, then mer
 
 ## Next Steps
 
+- Bypass lyrics file saving if there is an encoding issue with the characters
+- Include estimated time of scraping completion?
+- Play with the sequence length
 - Play with the neural network architecture (sizes, recurrent layer types) to see how that changes the predictions/generations
-- Transfer the Jupyter Notebooks into Python scripts
+- Transfer the lyrics generator Jupyter Notebooks into Python scripts
