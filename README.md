@@ -11,7 +11,7 @@ The aim of this project is to create a lyrics generator for any artist's lyrics,
 
 Lyrics are collected using the `scrape_artist_lyrics.py` Python script, then merged into a single file using the `concatenate.sh` shell script.
 
-`scrape_artist_lyrics.py` - Takes in an AZLyrics artist page URL as user input, creates a directory for the artist in the `lyrics` directory, then scrapes all of the artist's lyrics from [AZLyrics](https://www.azlyrics.com/), putting each song's lyrics into its own text file in the artist directory that was created.  Script is designed so that if the scraping must be interrupted, the individual song lyrics files that have already been obtained will remain, and when scraping is resumed for the same artist, it will begin where it left off.  **Required packages: [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/).**
+`scrape_artist_lyrics.py` - Takes in an AZLyrics artist page URL as user input, creates a directory for the artist in the `lyrics` directory, then scrapes all of the artist's lyrics from [AZLyrics](https://www.azlyrics.com/), putting each song's lyrics into its own text file in the artist directory that was created.  Script is designed so that if the scraping must be interrupted, the individual song lyrics files that have already been obtained will remain, and when scraping is resumed for the same artist, it will begin where it left off.  **Required packages: [BeautifulSoup4](https://www.crummy.com/software/BeautifulSoup/bs4/doc/).**
 
 `concatenate.sh` - Takes in the artist directory name as an argument, then concatenates each separate song lyrics file from that artist into a single lyrics file that is then placed in the `data` directory.
 
@@ -21,7 +21,7 @@ Lyrics are collected using the `scrape_artist_lyrics.py` Python script, then mer
 
 ## 2. Lyrics Generator
 
-`text_generation_rnn_char.ipynb` - A Jupyter Notebook in which a RNN is built, trained, and used to generate lyrics via *character prediction*.  Based on the [Text generation with an RNN tutorial](https://www.tensorflow.org/tutorials/text/text_generation) on the TensorFlow website.  **Required packages are [NumPy](https://numpy.org/install/) and [TensorFlow 2.2](https://www.tensorflow.org/install).**
+`text_generation_rnn_char.ipynb` - A Jupyter Notebook in which a RNN is built, trained, and used to generate lyrics via *character prediction*.  Based on the [Text generation with an RNN tutorial](https://www.tensorflow.org/tutorials/text/text_generation) on the TensorFlow website.  **Required packages: [NumPy](https://numpy.org/install/) and [TensorFlow 2.2](https://www.tensorflow.org/install).**
 
 `text_generation_rnn_word.ipynb` - Same as above, but for *word prediction*.
 
