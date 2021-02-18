@@ -55,13 +55,13 @@ if re.match(pattern='https:\/\/www\.azlyrics\.com\/([a-z]|[1][9])\/.+\.html', st
     print(f'\nObtaining lyrics from songs by {artist_name}.')
     
     # create directory to store lyrics in
-    if not os.path.exists(artist_dir_name):
-        os.mkdir(artist_dir_name)
-        print(f'\n"{artist_dir_name}" directory created in the working directory.')
+    if not os.path.exists(f'lyrics/{artist_dir_name}'):
+        os.mkdir(f'lyrics/{artist_dir_name}')
+        print(f'\n"{artist_dir_name}" directory created in the lyrics directory.')
 
     # print message if it already exists
     else:
-        print(f'\n"{artist_dir_name}" directory already exists in the working directory.')
+        print(f'\n"{artist_dir_name}" directory already exists in the lyrics directory.')
     
     
     
@@ -139,13 +139,13 @@ if re.match(pattern='https:\/\/www\.azlyrics\.com\/([a-z]|[1][9])\/.+\.html', st
     	### RANDOMIZE THE SLEEP TIMER (SOME KIND OF UPPER AND LOWER BOUNDS?) WITHIN THE LOOP??? ###
 
         # create a potential lyrics file name
-        lyrics_file_name = f'{artist_dir_name}/{song_url_names[i]}.txt'
+        lyrics_file_name = f'lyrics/{artist_dir_name}/{song_url_names[i]}.txt'
 
         # if the lyrics file already exists,
         if os.path.exists(lyrics_file_name):
 
             # print a message saying that it already exists in the artist director
-            print(f'Lyrics for "{song_names[i]}" already exist at {artist_dir_name}/{song_url_names[i]}.txt.')
+            print(f'Lyrics for "{song_names[i]}" already exist at lyrics/{artist_dir_name}/{song_url_names[i]}.txt.')
 
         # if the lyrics file DOESN'T exist,
         else:
@@ -224,7 +224,7 @@ if re.match(pattern='https:\/\/www\.azlyrics\.com\/([a-z]|[1][9])\/.+\.html', st
 #        log_file.write(log_str)
 
     # summary statement
-    print(f'\nLyrics for {len(song_names) - error_counter} songs have been saved to the {artist_dir_name} directory.\n\n')
+    print(f'\nLyrics for {len(song_names) - error_counter} songs have been saved to the lyrics/{artist_dir_name} directory.\n\n')
 
     # if any song lyrics were unable to be saved,
     if error_counter > 0:

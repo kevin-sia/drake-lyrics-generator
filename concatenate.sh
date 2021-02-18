@@ -23,9 +23,8 @@ else
 	#printf 'Concatenating %s files...' ls $1 | wc -l
 
 	# concatenate all files in artist's directory
-	# cat $1/*.txt >> data/$1_lyrics.txt
-	cd $1
-	cat $(ls -tr) >> ../data/$1_lyrics.txt
+	cd lyrics/$1
+	cat $(ls -tr) >> ../../data/$1_lyrics.txt
 
 	printf 'Individual lyrics files successfully concatenated to /data/%s.\n' $1_lyrics.txt
 
