@@ -1,6 +1,6 @@
 # Lyrics Generator
 
-[](https://images.ctfassets.net/cnu0m8re1exe/5shE8ddaU9AjSNz157nffI/eefd59783b225fc4b19f8bf10b640a4c/shutterstock_365531318.jpg)
+![](https://images.ctfassets.net/cnu0m8re1exe/5shE8ddaU9AjSNz157nffI/eefd59783b225fc4b19f8bf10b640a4c/shutterstock_365531318.jpg)
 
 The aim of this project is to create a lyrics generator for any artist's lyrics, with the original intent being a Drake lyrics generator.  It is comprised of two major parts:
 
