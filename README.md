@@ -40,9 +40,8 @@ The original intent of this project is to create a Drake lyrics generator, but f
 - Play with model training parameters and maybe make them user-defined:
 	- Sequence length
 	- Embedding dimension
-	- # of RNN units
-	- Recurrent layer types
-	- # of epochs
+	- Recurrent layer types and sizes
+	- Number of epochs
 - Play with text generation parameters and maybe make them user-defined:
 	- Temperature
 - The input words for word generation must be present in the vocabulary that the model is trained on.  Include this in the generation script(s)
