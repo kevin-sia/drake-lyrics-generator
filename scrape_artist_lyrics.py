@@ -206,7 +206,7 @@ if re.match(pattern='https:\/\/www\.azlyrics\.com\/([a-z]|[1][9])\/.+\.html', st
 
                             # message if text file can't be saved
                             print(f'Lyrics for "{song_names[i]}"" unable to be written (e.g. encoding issues).  {lyrics_file_name} saved as an empty text file.')
-                            
+
                             # append song name to log list
                             log.append(song_names[i])
             
@@ -214,7 +214,7 @@ if re.match(pattern='https:\/\/www\.azlyrics\.com\/([a-z]|[1][9])\/.+\.html', st
             time.sleep(random.randint(sleep_timer_min, sleep_timer_max))
     
     # create log file text
-    log_str = f'Lyrics for the following {artist_name} songs were unable to be written:\n'
+    log_str = f'Lyrics for the following {artist_name} songs were unable to be written and have been saved as empty text files:\n'
     for song in log:
         log_str += f'- {song}\n'
     
@@ -224,7 +224,7 @@ if re.match(pattern='https:\/\/www\.azlyrics\.com\/([a-z]|[1][9])\/.+\.html', st
 #        log_file.write(log_str)
 
     # summary statement
-    print(f'\nLyrics for {len(song_names) - error_counter} songs have been saved to the lyrics/{artist_dir_name} directory.\n\n')
+    print(f'\nLyrics for {len(song_names) - error_counter} songs have been saved to the lyrics/{artist_dir_name}/ directory.\n\n')
 
     # if any song lyrics were unable to be saved,
     if error_counter > 0:
