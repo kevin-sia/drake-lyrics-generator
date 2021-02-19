@@ -35,7 +35,7 @@ The original intent of this project is to create a Drake lyrics generator, but f
 
 ## Next Steps
 
-- Bypass lyrics file saving if there is an encoding issue with the characters
+- Bypass lyrics file saving if there is an encoding issue with the characters?
 - Include estimated time of scraping completion?
 - Play with model training parameters and maybe make them user-defined:
 	- Sequence length
@@ -44,4 +44,3 @@ The original intent of this project is to create a Drake lyrics generator, but f
 	- Number of epochs
 - Play with text generation parameters and maybe make them user-defined:
 	- Temperature
-- The input words for word generation must be present in the vocabulary that the model is trained on.  Include this in the generation script(s)
