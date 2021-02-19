@@ -1,7 +1,6 @@
 .ipynb_checkpoints/
+archive/
 lyrics/
 pkl/
 training_checkpoints/
-scrape_artist_lyrics.ipynb
-text_generation_rnn_char.ipynb
-text_generation_rnn_word.ipynb
+*.ipynb
